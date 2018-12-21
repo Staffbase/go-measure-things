@@ -21,14 +21,14 @@ var greetingsName = promauto.NewCounterVec(prometheus.CounterOpts{
 }, []string{"name"})
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
-	message := r.URL.Path
-	message = strings.TrimPrefix(message, "/")
-	message = "Hello " + message
+	name := r.URL.Path
+	name = strings.TrimPrefix(name, "/")
+	message := "Hello " + name
 	_, err := w.Write([]byte(message))
-	if err != nil {
+	if err == nil {
 		greetings.Inc()
-		if message != "" {
-			greetingsName.WithLabelValues(message).Inc()
+		if name != "" && name != "favicon.ico" {
+			greetingsName.WithLabelValues(name).Inc()
 		}
 	}
 }
