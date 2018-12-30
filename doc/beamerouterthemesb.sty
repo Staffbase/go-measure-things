@@ -22,4 +22,16 @@
   \end{beamercolorbox}
 }
 
+%% custom footer
+\defbeamertemplate*{footline}{sb}
+{
+  \hskip12cm
+  \begin{beamercolorbox}[wd=3cm, ht = 1cm]{page number in head/foot}
+    \ifnum\thepage>1\relax%
+      \insertpagenumber\,/\,\insertpresentationendpage\kern1em\vskip2pt%
+    \fi
+  \end{beamercolorbox}
+}
+
+
 \mode<all>
