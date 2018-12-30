@@ -10,10 +10,9 @@ import (
 	"time"
 )
 
-var sleeper = promauto.NewHistogram(prometheus.HistogramOpts{
-	Name:    "sleep_",
-	Help:    "The sleeping time the users requested.",
-	Buckets: prometheus.LinearBuckets(.0, 100., 50),
+var sleeper = promauto.NewSummary(prometheus.SummaryOpts{
+	Name: "sleep_",
+	Help: "The sleeping time the users requested.",
 })
 
 func sleep(w http.ResponseWriter, r *http.Request) {
