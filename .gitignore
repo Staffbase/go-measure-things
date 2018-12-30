@@ -10,3 +10,16 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+
+# stuff from the presentation
+doc/*.nav
+doc/*.fls
+doc/*.log
+doc/*.pdf
+doc/*.snm
+doc/*.backup
+doc/*.toc
+doc/*.aux
+doc/*.fdb_latexmk
+doc/*.dvi
