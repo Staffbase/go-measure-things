@@ -4,7 +4,7 @@
   \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
   \fill[color=white] (0,2) rectangle (\the\paperwidth,\the\paperheight);
-  \fill[color=orange] (0,0) rectangle(2.95,1.9);
+  \fill[color=yellow] (0,0) rectangle(2.95,1.9);
   \fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
   \ifnum\thepage>1\relax%
    \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
@@ -20,9 +20,10 @@
    \vskip4cm%
     \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
       % the title
-      \usebeamerfont{title}\textcolor{black}{\inserttitle}\par%
+      \usebeamerfont{title}\textbf{\textcolor{blue!50!cyan!80}{\inserttitle}}\par%
+      \usebeamerfont{subtitle}\textcolor{blue!50!cyan!80}{\insertsubtitle}\par%
     \end{beamercolorbox}%
-    \vskip0.75cm%
+    \vskip0.25cm%
     \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
       \usebeamerfont{author}\insertauthor%
     \end{beamercolorbox}
