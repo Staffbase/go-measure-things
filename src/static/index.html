@@ -1,0 +1,20 @@
+<html>
+<head>
+
+    <script type="application/javascript">
+        function sayHello() {
+            var target = document.getElementById("toGreet").value;
+            document.location.href = target;
+        }
+    </script>
+
+</head>
+<body>
+    <label for="toGreet">Say hello to: </label>
+    <input type="text" id="toGreet" value="Frank"/>
+    <input type="button" onclick="sayHello()" value="Send greetings"/>
+    <br/>
+    <a href="/metrics">The metrics</a>
+
+</body>
+</html>
