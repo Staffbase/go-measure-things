@@ -2,13 +2,25 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{default}
+\usepackage{listings}
+\usepackage{cancel} %% strikthrough text via \cancel{text}
+
 
 %% installing extra fonts to use this
 %%  on debian: apt-get install texlive-fonts-extra   
 %%  or elsewhere via the texlive manager: tlmgr install fontawesome
 \usepackage{fontawesome} %% some nice icons ftp://ftp.dante.de/tex-archive/fonts/fontawesome/doc/fontawesome.pdf
 
+%% use custom Staffbase beamer theme
 \usetheme{sb}
+
+\providecommand{\inlinecode}[1]{
+% \texttt{#1}
+%   \colorbox{lightgray}{
+    \lstinline[basicstyle=\ttfamily\color{blue!50!cyan!80}]|#1|
+%   } 
+}
+
 
 
 \title{Go, measure things!}

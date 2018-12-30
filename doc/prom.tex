@@ -1,14 +1,51 @@
-\section{The Prometheus stack}
+\section{Prometheus}
+\subsection{The stack of Prometheus}
 \begin{frame}
   \frametitle{The stack of Prometheus}   
   \begin{block}{Prometheus is ...}
     an open-source systems monitoring and alerting toolkit...\footnote{https://prometheus.io/docs/introduction/overview/}
   \end{block}
   
-  \begin{Definition}
-  abs
-  \end{Definition}
- 
+  How does it work?
+  \begin{itemize}
+   \item it pulls data via HTTP from a webserver for each $x$ seconds
+   \item targets are defined via service discovery or statically
+   \item time series data with a name\\ \inlinecode{http\_requests\_total 7}
+   \item multi-dimensional\\ \inlinecode{http\_requests\_total\{server="nginx01"\} 7}
+   \item PromQL \\ \inlinecode{irate(http\_requests\_total\{server="nginx01"\}[10m])}
+  \end{itemize}
   
+\end{frame}
+
+\subsection{Metric types}
+\begin{frame}
+  \frametitle{Metric types}
+
+  Everything is \cancel{real} \inlinecode{double}! {\small(64 bit floating point number)}
+  
+  \begin{itemize}
+   \item Counter 
+    \begin{itemize}
+     \item an increasing number 
+     \item resets are automatically handled by PromQL
+    \end{itemize}
+
+   \item Gauge
+    \begin{itemize}
+     \item goes up and down
+    \end{itemize}
+
+   \item Histogramm
+    \begin{itemize}
+     \item samples observations
+     \item automatically provides total sum and count of observated events
+    \end{itemize}
+
+   \item Summary
+    \begin{itemize}
+     \item Histogramm + configuratble quantiles
+    \end{itemize}
+
+  \end{itemize}
 \end{frame}
 
