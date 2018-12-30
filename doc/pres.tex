@@ -3,11 +3,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{default}
 
+%% installing extra fonts to use this
+%%  on debian: apt-get install texlive-fonts-extra   
+%%  or elsewhere via the texlive manager: tlmgr install fontawesome
+\usepackage{fontawesome} %% some nice icons ftp://ftp.dante.de/tex-archive/fonts/fontawesome/doc/fontawesome.pdf
 
 \usetheme{sb}
 
 
-\title{Go measure things!}
+\title{Go, measure things!}
 \author{Martin Sommer}
 \date{\today}
 
@@ -16,13 +20,28 @@
 
 \maketitle
 
-
 \frame{\tableofcontents[currentsection]}
 
-\section{Abschnitt 1}
-\begin{frame} %%Eine Folie
-  \frametitle{Ein Demotitel} %%Folientitel
-  \begin{Definition} %%Definition
+\section{Motivation}
+\begin{frame}
+  \frametitle{Motivation} 
+  Some text
+  
+  \begin{itemize}
+   \item More complex systems \faLongArrowUp
+   \item Support of scalable systems \faLongArrowUp
+   \item 
+  \end{itemize}
+
+\end{frame}
+
+
+\section{The Prometheus stack}
+\begin{frame}
+  \frametitle{The stack of Prometheus} 
+  Some text
+  
+  \begin{Definition}
     Eine Definition
   \end{Definition}
 \end{frame}

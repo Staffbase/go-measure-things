@@ -2,6 +2,8 @@ LMK=latexmk
 MAIN=pres.tex
 
 
+# This needs the package: texlive-fonts-extra
+
 all: pdf
 
 pdf:
