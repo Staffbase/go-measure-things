@@ -31,11 +31,21 @@ to compile the Latex source into a PDF.
 
 ## Building
 
-Go to the `src` directory and execute:
+Install [GOLang](https://golang.org/doc/install) 1.11 or newer.
+Just execute:
 
 ```
-go build main.go
-go build sleep.go
+go build
 ```
 
 to build all files.
+
+Now you can start the binary using the executable file: 
+```
+./go-measure-things
+```
+
+An alternative is starting the program directly via go after compiling it
+```
+go run main.go sleep.go
+```
