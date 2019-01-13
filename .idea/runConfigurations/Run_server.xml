@@ -2,8 +2,9 @@
   <configuration default="false" name="Run server" type="GoApplicationRunConfiguration" factoryName="Go Application">
     <module name="go-measure-things" />
     <working_directory value="$PROJECT_DIR$/" />
-    <kind value="FILE" />
-    <filePath value="$PROJECT_DIR$/src/main.go" />
+    <kind value="DIRECTORY" />
+    <filePath value="$PROJECT_DIR$/main.go" />
+    <package value="go-measure-things" />
     <directory value="$PROJECT_DIR$/" />
     <method v="2" />
   </configuration>
