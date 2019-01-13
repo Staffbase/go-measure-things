@@ -5,7 +5,6 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"net/http"
-	"strconv"
 	"time"
 )
 
@@ -16,13 +15,15 @@ var sleeper = promauto.NewSummary(prometheus.SummaryOpts{
 
 func sleep(w http.ResponseWriter, r *http.Request) {
 	sleepParam := r.URL.Query().Get("sleep")
-	duration, err := strconv.ParseFloat(sleepParam, 32)
+	// use build in time string parsing
+	duration, err := time.ParseDuration(sleepParam)
 	if err == nil {
+		fmt.Printf("Sleeping for %s.\n", duration.String())
 		time.Sleep(time.Duration(duration))
-		sleeper.Observe(duration)
-		_, _ = fmt.Fprintf(w, "Sleept for %f milliseconds.\n", duration)
+		sleeper.Observe(duration.Seconds())
+		_, _ = fmt.Fprintf(w, "Sleeping for %s.\n", duration.String())
 	} else {
 		_, _ = fmt.Fprintf(w, "Could not parse input '%s'\n", sleepParam)
-		_, _ = fmt.Fprint(w, "Try using localhost:8080/sleep?sleep=1000\n")
+		_, _ = fmt.Fprint(w, "Try using localhost:8080/sleep?sleep=10s\n")
 	}
 }
