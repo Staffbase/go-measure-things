@@ -52,7 +52,7 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println("Starting a local echo server on http://localhost:8080 ...")
+	fmt.Println("Starting a local server on http://localhost:8080 ...")
 	http.Handle("/metrics", promhttp.Handler())
 	http.HandleFunc("/sleep", sleep)
 	http.HandleFunc("/", sayHello)

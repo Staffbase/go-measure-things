@@ -7,14 +7,25 @@
             document.location.href = target;
         }
     </script>
-
+    <style type="text/css">
+        .form {
+            padding: 2em;
+        }
+        .links {
+        }
+    </style>
 </head>
 <body>
-    <label for="toGreet">Say hello to: </label>
-    <input type="text" id="toGreet" value="Frank"/>
-    <input type="button" onclick="sayHello()" value="Send greetings"/>
-    <br/>
-    <a href="/metrics">The metrics</a>
+    <div class="form">
+        <label for="toGreet">Say hello to: </label>
+        <input type="text" id="toGreet" value="Frank"/>
+        <input type="button" onclick="sayHello()" value="Send greetings"/>
 
+    </div>
+    <div class="links">
+        <ol>
+            <li><a href="/metrics">The metrics</a></li>
+        </ol>
+    </div>
 </body>
 </html>
