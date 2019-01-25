@@ -9,7 +9,7 @@ import (
 )
 
 var sleeper = promauto.NewSummary(prometheus.SummaryOpts{
-	Name: "sleep_",
+	Name: "sleep_requested_seconds",
 	Help: "The sleeping time the users requested.",
 })
 
