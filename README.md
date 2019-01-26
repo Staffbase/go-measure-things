@@ -54,9 +54,18 @@ go run main.go sleep.go greetings.go
 ## Running Prometheus
 
 ```
+chmod 777 -R prometheus-data
 docker run -p 9090:9090 \
-   --volume $(pwd)/prometheus-data:/prometheus-data \
-   prom/prometheus \
-   --config.file=/prometheus-data/prometheus.yml
+  --name prom \
+  --volume $(pwd)/prometheus-data:/prometheus-data:rw \
+  prom/prometheus \
+  --config.file=/prometheus-data/prometheus.yml \
+  --storage.tsdb.path=/prometheus-data/data
+```
 
+Now you can access promtheus via http://localhost:9090/
+
+Get logs 
+```
+docker logs -f prom
 ```

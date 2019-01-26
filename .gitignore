@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+go-measure-things
 
 # Test binary, build with `go test -c`
 *.test
@@ -23,3 +24,5 @@ doc/*.toc
 doc/*.aux
 doc/*.fdb_latexmk
 doc/*.dvi
+
+prometheus-data/data
