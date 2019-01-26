@@ -47,5 +47,16 @@ Now you can start the binary using the executable file:
 
 An alternative is starting the program directly via go after compiling it
 ```
-go run main.go sleep.go
+go run main.go sleep.go greetings.go
+```
+
+
+## Running Prometheus
+
+```
+docker run -p 9090:9090 \
+   --volume $(pwd)/prometheus-data:/prometheus-data \
+   prom/prometheus \
+   --config.file=/prometheus-data/prometheus.yml
+
 ```
