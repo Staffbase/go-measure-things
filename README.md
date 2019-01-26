@@ -52,6 +52,8 @@ go run main.go sleep.go greetings.go
 
 
 ## Running Prometheus
+Change the target ip address `192.168.0.4` in the file `prometheus-data/prometheus.yml`
+to your local hosts IP address which is reachable via docker. 
 
 ```
 chmod 777 -R prometheus-data
@@ -68,4 +70,16 @@ Now you can access promtheus via http://localhost:9090/
 Get logs 
 ```
 docker logs -f prom
+```
+
+## Grafana
+
+```
+docker run \
+  -d \
+  -p 3000:3000 \
+  --name=grafana \
+  -e "GF_SERVER_ROOT_URL=http://localhost" \
+  -e "GF_SECURITY_ADMIN_PASSWORD=secret" \
+  grafana/grafana
 ```
