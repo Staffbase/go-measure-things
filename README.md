@@ -4,11 +4,11 @@ An example project how to export application metrics to Prometheus
 
 ## Planned talks
 
-30. January 2019 
-- Chemnitz Cloud Native Meetup #2 at Staffbase HQ https://www.meetup.com/de-DE/Chemnitz-Cloud-Native-Meetup/events/257370642/
+*30. January 2019* 
+- [Chemnitz Cloud Native Meetup #2](https://www.meetup.com/de-DE/Chemnitz-Cloud-Native-Meetup/events/257370642/) at Staffbase HQ 
 
-16. or 17. March 2019 (not yet accepted)
-- Chemnitz CLT 2019 as German talk "Prometheus in Aktion: Go, measure things!" 
+*16. or 17. March 2019 (not yet accepted)*
+- Chemnitz [CLT 2019](https://chemnitzer.linux-tage.de/2019/) as German talk "Prometheus in Aktion: Go, measure things!" 
 
 
 # Compiling
@@ -65,7 +65,7 @@ docker run -p 9090:9090 \
   --storage.tsdb.path=/prometheus-data/data
 ```
 
-Now you can access promtheus via http://localhost:9090/
+Now you can access Prometheus via http://localhost:9090/
 
 Get logs 
 ```
@@ -73,6 +73,8 @@ docker logs -f prom
 ```
 
 ## Grafana
+
+Simply run the following command to start Grafan locally in a docker container.
 
 ```
 docker run \
