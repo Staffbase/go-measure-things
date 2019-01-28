@@ -83,3 +83,8 @@ docker run \
   -e "GF_SECURITY_ADMIN_PASSWORD=secret" \
   grafana/grafana
 ```
+
+## Metrics
+
+* Average sleep time `things_sleep_requested_seconds_sum / things_sleep_requested_seconds_count`
+* Personal Greetings `things_sent_greetings_personal_total`
