@@ -6,6 +6,10 @@
             var target = document.getElementById("toGreet").value;
             document.location.href = target;
         }
+        function sleep() {
+            var duration = document.getElementById("toSleep").value;
+            document.location.href = '/sleep?sleep=' + duration;
+        }
     </script>
     <style type="text/css">
         .form {
@@ -20,6 +24,12 @@
         <label for="toGreet">Say hello to: </label>
         <input type="text" id="toGreet" value="Frank"/>
         <input type="button" onclick="sayHello()" value="Send greetings"/>
+
+    </div>
+    <div class="form">
+        <label for="toSleep">Sleep for: </label>
+        <input type="text" id="toSleep" value="1.5s"/>
+        <input type="button" onclick="sleep()" value="Sleep now!"/>
 
     </div>
     <div class="links">
