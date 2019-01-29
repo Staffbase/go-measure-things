@@ -18,6 +18,12 @@ src_extensions=.tex .ltx .latex .dtx .ins
 MakeIndex=
 QuickBuild=
 
+[item:demo.tex]
+archive=true
+encoding=UTF-8
+highlight=LaTeX
+mode=LaTeX
+
 [item:gomeasurethings.kilepr]
 archive=true
 encoding=
