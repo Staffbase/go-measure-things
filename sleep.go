@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var sleeper = promauto.NewSummary(prometheus.SummaryOpts{
+var sleeper = promauto.NewHistogram(prometheus.HistogramOpts{
 	Name: "things_sleep_requested_seconds",
 	Help: "The sleeping time the users requested.",
 })

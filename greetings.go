@@ -31,6 +31,8 @@ func sayHello(w http.ResponseWriter, r *http.Request) {
 		_, err := w.Write([]byte(message))
 		if err == nil {
 			greetings.Inc()
+			// more explicit handling:
+			//   greetingsName.With(prometheus.Labels{"name": name}).Inc()
 			greetingsName.WithLabelValues(name).Inc()
 		}
 	}
