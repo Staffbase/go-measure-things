@@ -1,0 +1,16 @@
+\section{Summary}
+\begin{frame}
+  \frametitle{Summary of the golang example} 
+ 
+    \begin{itemize}
+     \item Using of \inlinecode{promauto} makes registry handling implicit 
+     \item If available use instrumentation libaraies and exporters\footnote{\url{https://prometheus.io/docs/instrumenting/exporters/}}: \inlinecode{JMX_exporter}, \inlinecode{mongodb_exporter}, \inlinecode{redis_exporter}, \inlinecode{haproxy_exporter},\inlinecode{node_exporter}, \inlinecode{cAdvisor}, \inlinecode{kubernetes}...
+    \end{itemize}
+
+ 
+   \begin{block}{Warning}
+   Make sure your \inlinecode{/metrics}-endpoint is not public available. Otherwise you might regret it.
+  \end{block}
+  
+
+\end{frame}

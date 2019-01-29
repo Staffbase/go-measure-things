@@ -17,6 +17,7 @@
 \providecommand{\inlinecode}[1]{
 % \texttt{#1}
 %   \colorbox{lightgray}{
+%    \lstinline[basicstyle=\ttfamily\color{darkgray}]|#1|
     \lstinline[basicstyle=\ttfamily\color{blue!50!cyan!80}]|#1|
 %   } 
 }
@@ -40,7 +41,10 @@
 \include{motivation}
 \include{prom}
 \include{promql}
+
+
 \include{demo}
+\include{go-example}
 
 
 \end{document}
