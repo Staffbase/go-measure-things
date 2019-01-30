@@ -106,8 +106,8 @@
     {
       "columns": [
         {
-          "text": "Avg",
-          "value": "avg"
+          "text": "Current",
+          "value": "current"
         }
       ],
       "fontSize": "100%",
@@ -425,7 +425,7 @@
     "list": []
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -456,5 +456,5 @@
   "timezone": "",
   "title": "Greetings",
   "uid": "vl_DqIlmz",
-  "version": 6
+  "version": 2
 }
