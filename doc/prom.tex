@@ -24,24 +24,24 @@
   Everything is \cancel{real} \inlinecode{double}! {\small(64 bit floating point number)}
   
   \begin{itemize}
-   \item Counter 
+   \item<1-> Counter 
     \begin{itemize}
      \item an increasing number 
      \item resets are automatically handled by PromQL
     \end{itemize}
 
-   \item Gauge
+   \item<2-> Gauge
     \begin{itemize}
      \item goes up and down
     \end{itemize}
 
-   \item Histogram
+   \item<3-> Histogram
     \begin{itemize}
      \item samples observations
      \item automatically provides total sum and count of observated events
     \end{itemize}
 
-   \item Summary
+   \item<4-> Summary
     \begin{itemize}
      \item Histogram + quantiles configured on the client side
     \end{itemize}

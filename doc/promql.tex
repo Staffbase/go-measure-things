@@ -5,14 +5,14 @@
   Query language for Prometheus time series data.
  
   \begin{itemize}
-    \item Instant vector:\\
+    \item<1-> Instant vector:\\
        \inlinecode{things_sent_greetings_total}
-    \item Filter the instant vector:
+    \item<2-> Filter the instant vector:
        \inlinecode{things_sent_greetings_personal_total\{name="Peter"\}}
        Also possible \inlinecode{!=} or regex matches \inlinecode{=~} and \inlinecode{!~}
-    \item Range vector: (last 5 minutes of the instant vector)\\
+    \item<3-> Range vector: (last 5 minutes of the instant vector)\\
         \inlinecode{things_sent_greetings_personal_total\{name="Peter"\}[5m]}
-    \item Functions on range vectors: (per second average)\\
+    \item<4-> Functions on range vectors: (per second average)\\
         \inlinecode{rate(things_..._total\{name="Peter"\}[5m])}
   \end{itemize}
 
