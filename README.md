@@ -74,7 +74,7 @@ docker logs -f prom
 
 ## Grafana
 
-Simply run the following command to start Grafan locally in a docker container.
+Simply run the following command to start Grafana locally in a docker container.
 
 ```
 docker run \
