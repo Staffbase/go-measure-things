@@ -10,10 +10,15 @@ An example project how to export application metrics to Prometheus
 *16. or 17. March 2019 (not yet accepted)*
 - Chemnitz [CLT 2019](https://chemnitzer.linux-tage.de/2019/) as German talk "Prometheus in Aktion: Go, measure things!" 
 
+## Legal 
 
-# Compiling
+* [LICENSE](../master/LICENSE) file
+* [CONTRIBUTING.md](../master/CONTRIBUTING.md) file (clarifying how to contribute)
+* [CLA.md](../master/CLA.md) file (a Contributor License Agreement, see below)
 
-## Documentation
+## Compiling
+
+### Documentation
 
 Go to the `doc` folder and execute either:
 
@@ -29,7 +34,7 @@ latexmk -pdf pres.tex
 to compile the Latex source into a PDF.
 
 
-## Building
+### Building
 
 Install [GOLang](https://golang.org/doc/install) 1.11 or newer.
 Just execute:
@@ -51,7 +56,7 @@ go run main.go sleep.go greetings.go
 ```
 
 
-## Running Prometheus
+### Running Prometheus
 Change the target ip address `192.168.0.4` in the file `prometheus-data/prometheus.yml`
 to your local hosts IP address which is reachable via docker. 
 
@@ -72,7 +77,7 @@ Get logs
 docker logs -f prom
 ```
 
-## Grafana
+### Grafana
 
 Simply run the following command to start Grafana locally in a docker container.
 
@@ -86,7 +91,7 @@ docker run \
   grafana/grafana
 ```
 
-## Metrics
+### Metrics
 
 * Average sleep time `things_sleep_requested_seconds_sum / things_sleep_requested_seconds_count`
 * Personal Greetings `things_sent_greetings_personal_total`
