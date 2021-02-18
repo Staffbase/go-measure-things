@@ -12,9 +12,9 @@ An example project how to export application metrics to Prometheus
 
 ## Legal 
 
-* [LICENSE](../master/LICENSE) file
-* [CONTRIBUTING.md](../master/CONTRIBUTING.md) file (clarifying how to contribute)
-* [CLA.md](../master/CLA.md) file (a Contributor License Agreement, see below)
+* [License](../master/LICENSE)
+* How to [contribute](../master/CONTRIBUTING.md)
+* [Contributor License Agreement](../master/CLA.md)
 
 ## Compiling
 
