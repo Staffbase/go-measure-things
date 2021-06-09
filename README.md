@@ -1,3 +1,5 @@
+# ⚠️ This repository is no longer under development and archived (read-only)
+
 # go-measure-things
 An example project how to export application metrics to Prometheus
 
